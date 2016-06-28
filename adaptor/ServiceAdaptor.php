@@ -21,7 +21,13 @@
 			$service->lyricsSongBookLink = $row->{'gsx$lyricssongbooknotworking'}->{'$t'};
 			for($i = 1; $i <=10; $i++)
 			{
-				self::addSongToList($i, $row, $service);
+				try
+				{
+					self::addSongToList($i, $row, $service);
+				}catch(Exception $e)
+				{
+					//TODO log error message. 
+				}
 			}
 			
 			return $service;
@@ -42,7 +48,11 @@
 			if($songCode != null)
 			{
 				$songdao = new GSSSongDAO();
-				$service->addSong($songdao->getSong($songCode));
+				$song = $songdao->getSong($songCode);
+				if($song != null)
+				{
+					$service->addSong($song);
+				}
 			}
 		}
 	}
