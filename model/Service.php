@@ -22,7 +22,8 @@
 				 	"<b>Song List: </b></br>" . $songoutput .
 					"<b>Song Books: </b></br><a href='".$this->pianoSongBookLink."'>Piano Song Book</a></br>" .
 					"<a href='".$this->leadSongBookLink."'>Lead Song Book</a></br>" . 
-					"<a href='".$this->guitarSongBookLink."'>Guitar Song Book</a></br>";			
+					"<a href='".$this->guitarSongBookLink."'>Guitar Song Book</a></br>" . 
+					"<a href='".$this->lyricsSongBookLink."'>Lyrics Song Book</a></br>";			
 		 }
 		 
 		 function addSong(Song $aSong)
