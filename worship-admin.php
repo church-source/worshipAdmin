@@ -29,7 +29,6 @@ function worship_admin( $atts )
 	$serviceDAO = new GSSServiceDAO();
 	
 	$services = $serviceDAO->getAllServiceHistoryEntriesBetweenDates($dt_min, $dt_max);
-	//TODO: remove the toString and replace with html view includes. 	
 	$output = "";
 	if($services == null || empty($services))
 	{ 
@@ -50,7 +49,9 @@ function worship_admin( $atts )
 		}
 		$prev_date = $service->date;
 	}
+	
 
+	
 	return $output;
 	//encoding
 }

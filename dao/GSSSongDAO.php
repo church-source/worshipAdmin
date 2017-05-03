@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/../cust/Config.php');
+require_once(__DIR__ . '/../cust/Util.php');
 require_once(__DIR__ . '/../model/Song.php');
 require_once(__DIR__ . '/../adaptor/SongAdaptor.php');
 require_once(__DIR__ . '/../adaptor/GoogleSpreadsheetAdaptorFactory.php');
@@ -23,7 +24,7 @@ class GSSSongDAO implements ISongDAO
 	/*Returns map of songs. Song Code as key*/
 	public static function loadMapOfSongs()
 	{
-		$json = file_get_contents(Config::SONG_LIBRARY_LINK);
+		$json = utilphp\util::getFileContents(Config::SONG_LIBRARY_LINK);
 		$obj = json_decode($json);
 		
 		$rows = $obj->{'feed'}->{'entry'};

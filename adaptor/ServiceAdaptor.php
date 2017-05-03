@@ -9,7 +9,6 @@
 		{
 			//do nothing
 		}
-
 		public function createService($row)
 		{	
 			$service = new Service();

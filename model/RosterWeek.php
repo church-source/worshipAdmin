@@ -36,7 +36,6 @@ require_once(__DIR__ . '/../cust/Util.php');
 			if(!utilphp\util::IsNullOrEmptyString($this->soundDesk))
 			 	$finalOutput = $finalOutput . "<li>Sound Desk: " . $this->soundDesk . "</br>";
 		 	$finalOutput = $finalOutput . "</ul>";
-		 	
 			return $finalOutput;
 		 }
 		 

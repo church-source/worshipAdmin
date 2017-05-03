@@ -1,6 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/../cust/Config.php');
+require_once(__DIR__ . '/../cust/Util.php');
 require_once(__DIR__ . '/../model/Service.php');
 require_once(__DIR__ . '/../adaptor/ServiceAdaptor.php');
 require_once(__DIR__ . '/../adaptor/GoogleSpreadsheetAdaptorFactory.php');
@@ -18,7 +19,8 @@ class GSSRosterDAO implements IRosterDAO
 	/*Returns map of songs. Song Code as key*/
 	public static function loadRoster()
 	{
-		$json = file_get_contents(Config::ROSTER_LINK);
+		ini_set("allow_url_fopen", 1);
+		$json = utilphp\util::getFileContents(Config::ROSTER_LINK);
 		$obj = json_decode($json);
 	
 		$rows = $obj->{'feed'}->{'entry'};
