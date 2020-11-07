@@ -17,7 +17,7 @@
 			$service->guitarSongBookLink  = $row->{'gsx$guitarchordsongbook'}->{'$t'};
 			$service->leadSongBookLink= $row->{'gsx$leadsheetsongbook'}->{'$t'};
 			$service->pianoSongBookLink = $row->{'gsx$pianosheetmusicsongbook'}->{'$t'};
-			$service->lyricsSongBookLink = $row->{'gsx$lyricssongbooknotworking'}->{'$t'};
+			$service->lyricsSongBookLink = $row->{'gsx$lyricssongbook'}->{'$t'};
 			for($i = 1; $i <=10; $i++)
 			{
 				try

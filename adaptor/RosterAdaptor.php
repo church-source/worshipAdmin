@@ -24,6 +24,7 @@
 			$rosterWeek->violin = $row->{'gsx$violin'}->{'$t'};
 			$rosterWeek->drums = $row->{'gsx$drums'}->{'$t'};
 			$rosterWeek->lute = $row->{'gsx$lute'}->{'$t'};
+			$rosterWeek->cello = $row->{'gsx$cello'}->{'$t'};
 			$rosterWeek->soundDesk = $row->{'gsx$sounddesk'}->{'$t'};
 
 			

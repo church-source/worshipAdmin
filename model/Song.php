@@ -20,11 +20,11 @@
 			return 	"<b>". $this->code . "</b> - " . 
 				 	$this->songTitle . 
 					" (" . $this->secondaryTitle . ") -" .
-					" [Key: " . $this->key . "; ".
-					"<a href=\"". $this->sheetGuitarChords ."\">Guitar</a>; " .
-					"<a href=\"". $this->sheetMusicPiano ."\">Piano</a>; " .
-					"<a href=\"". $this->sheetMusicLead ."\">Lead</a>; " .
-					"<a href=\"". $this->sheetLyrics ."\">Lyrics</a>] ";
+					"  Key: " . $this->key . ", ".
+					"<a href=\"". $this->sheetGuitarChords ."\">Guitar</a>, " .
+					"<a href=\"". $this->sheetMusicPiano ."\">Piano</a>, " .
+					"<a href=\"". $this->sheetMusicLead ."\">Lead</a>, " .
+					"<a href=\"". $this->sheetLyrics ."\">Lyrics</a> ";
 		 }
 		 
 	}

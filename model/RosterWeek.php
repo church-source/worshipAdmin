@@ -11,6 +11,7 @@ require_once(__DIR__ . '/../cust/Util.php');
 		 var $violin ='';
 		 var $drums ='';
 		 var $lute ='';
+		 var $cello ='';
 		 var $soundDesk ='';
 		 
 		 function toString()
@@ -32,7 +33,9 @@ require_once(__DIR__ . '/../cust/Util.php');
 			if(!utilphp\util::IsNullOrEmptyString($this->drums))
 				$finalOutput = $finalOutput . "<li>Drums: " . $this->drums . "</br>";
 			if(!utilphp\util::IsNullOrEmptyString($this->lute))
-				$finalOutput = $finalOutput . "<li>Lute: " . $this->lute . "</br>";					
+				$finalOutput = $finalOutput . "<li>Lute: " . $this->lute . "</br>";
+			if(!utilphp\util::IsNullOrEmptyString($this->cello))
+				$finalOutput = $finalOutput . "<li>Cello: " . $this->cello . "</br>";								
 			if(!utilphp\util::IsNullOrEmptyString($this->soundDesk))
 			 	$finalOutput = $finalOutput . "<li>Sound Desk: " . $this->soundDesk . "</br>";
 		 	$finalOutput = $finalOutput . "</ul>";
